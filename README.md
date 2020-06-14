@@ -39,4 +39,6 @@ An example to launch the container could be the following (don't forget to updat
     -e "TELEGRAM_TOKEN=378572660:AAHaLn4NylzJuv4kl4XusEtG3L" \
     -e "ID_TELEGRAM=123456" \
     rafa93m/simple-ddns
+    
+To use it on an ARM architecture like a Raspberry Pi you can use the image: `rafa93m/simple-ddns:arm`
 
