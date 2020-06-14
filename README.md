@@ -1,4 +1,4 @@
-﻿# Simple-DDNS - Docker
+# Simple-DDNS - Docker
 
 The following Docker image will help you easily implement a **DDNS** system in your infrastructure.
 
