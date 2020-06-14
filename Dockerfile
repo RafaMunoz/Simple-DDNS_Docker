@@ -9,7 +9,7 @@ RUN set -eux \
 
 RUN mkdir /opt/src
 COPY ./src /opt/src
-RUN chmod -R 644 /opt/src
+RUN chmod -R +x /opt/src
 
 
 WORKDIR /opt/src
