@@ -92,7 +92,7 @@ while True:
         for domain in domains_list:
             ips_record = dns_query.dns_lookup(domain)
 
-            if len(ips_record) >= 1 and ips_record.answer[0] == ip_now:
+            if len(ips_record.answer) >= 1 and ips_record.answer[0] == ip_now:
                 mes = "DNS servers already resolve the new IP address: *{0}* for domain: *{1}*".format(ip_now, domain)
                 print(mes)
                 send_message(mes)
