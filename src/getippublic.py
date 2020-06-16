@@ -80,12 +80,19 @@ request_ddns = "{0}/nic/update?hostname={1}&myip={2}"
 dns_query = Nslookup(dns_servers=["1.1.1.1","8.8.8.8"])
 
 last_ip = ""
-dns_update = 0
+dns_update = 1
+
+send_message("Start *Simple-DDNS*!")
 
 while True:
 
     # Check IP Public
-    ip_now = requestAPI(url_getip)["ip"]
+    try:
+        ip_now = requestAPI(url_getip)["ip"]
+    except Exception as e:
+        print("Error check IP: {0}".format(e))
+        time.sleep(5)
+        continue
 
     # Check DNS change
     if dns_update == 0:
